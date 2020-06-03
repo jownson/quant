@@ -5,3 +5,5 @@ with open('data.csv', 'r') as f:
     print(type(reader))
     for row in reader:
         print(row)
+
+
