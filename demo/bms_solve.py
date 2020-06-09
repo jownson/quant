@@ -18,8 +18,8 @@ def solve_bcl_data(csv_file):
         i = i + 1;
     return res;
 
-
-df = pd.read_csv(in_csv_file, encoding='gb2312')
+df = pd.rea
+d_csv(in_csv_file, encoding='gb2312')
 res = solve_bcl_data(df)
 res.to_csv(bcl_out_file, encoding='gb2312');
 
