@@ -30,3 +30,6 @@ def handle_data(context, data):
     record(AAPL=data.current(context.asset, 'price'),
            short_mavg=short_mavg,
            long_mavg=long_mavg)
+
+#$ QUANDL_API_KEY=<yourkey> zipline ingest -b quandl
+#$ zipline run -f dual_moving_average.py --start 2014-1-1 --end 2018-1-1 -o dma.pickle

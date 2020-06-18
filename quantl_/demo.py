@@ -65,3 +65,8 @@ clean[-b < bundle >] - -keep - last
 # 查看zipline 数据
 $ zipline
 bundles
+
+
+
+$ QUANDL_API_KEY=dfs3NNy17Yb9Adu9xfCC zipline ingest -b quandl
+$ zipline run -f dual_moving_average.py --start 2014-1-1 --end 2018-1-1 -o dma.pickle

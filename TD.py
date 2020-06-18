@@ -1,0 +1,29 @@
+# Import the client
+from td.client import TDClient
+
+# Create a new session, credentials path is optional.
+TDSession = TDClient(
+    client_id='jownson1',
+    redirect_uri='https://auth.tdameritrade.com/auth?response_type=code&redirect_uri=https://127.0.0.1:10808&client_id=JYBXVEAT0LEHG5LDLCBJINIWRZRICCYT@AMER.OAUTHAP'
+#    credentials_path=''
+)
+
+# Login to the session
+TDSession.login()
+
+# Grab real-time quotes for 'MSFT' (Microsoft)
+msft_quotes = TDSession.get_quotes(instruments=['MSFT'])
+
+# Grab real-time quotes for 'AMZN' (Amazon) and 'SQ' (Square)
+multiple_quotes = TDSession.get_quotes(instruments=['AMZN','SQ'])
+
+https://auth.tdameritrade.com/auth?response_type=code&redirect_uri=https://127.0.0.1:10808&client_id=JYBXVEAT0LEHG5LDLCBJINIWRZRICCYT@AMER.OAUTHAP
+
+https://127.0.0.1:10808/?code=
+
+txboDDRiT%2BNLwIpeakTL1RMF%2FeZVTBuVugFhZKd%2BGjD0OynrCndozOghUXd9imJbpZI%2FaPnoyeVgyeziI%2B6ct%2F6NagRWOJ42wqhAOTqRTTt6BbisxK8cvPZ8wjb4s1%2FRgtbO7t5mcRR08vAF1goJEU2plViGUsEqa7KkG4JfRed22R%2B%2FwTKbfedNBJNo8Vm2KBCEPaZFCLAtdZ3pFYmRDNm%2BbGY8knO11wqajlpa8AaMsiCc5Cms4suKmiodoJa6CY2zLdFPIdg%2FCnjPN3JB01D0oCFjP%2Fpyxt%2BBdAYv0NA5iZ8ll5yTu%2BdAHXt8DOVk7M7%2BVJQGwhcAbyt86SMzvGtBnQlWy5qcFq4fhN6f6GzWavjOPjBV5uZ6XV1%2Bf%2BJx6oSEs%2FGYaArA3tKK2orytn%2Bmmgp9P0Isi7Ypt1U%2Fbx4%2BizL%2BmaA64gJPUKr100MQuG4LYrgoVi%2FJHHvlrQ0fT7EqGDcNe2z0qMQaVmKCfz%2BREIG68i9y%2B9%2B7L8%2B3IvGzglAJMNABdgdTLj%2BmC8zLQtwx0B%2Bgt8ADiYiq7lXM1nZknXEuTBgEKKIAQb13kHtUTHWTdluaXc%2Bb7AhzGx0gMUpp8mwsEyeegyxc4DZN0My%2Bk0uL1o4ptD8%2F13p%2BrV5mwNN0pLbp9VB3iQdTX7aBdclYa6FfYwzy6rq0e6tR%2BuHR4aG%2BoJEGFd7mUFxd%2FRey95c9ZB3Ek8VdZ8tDHIr0TczlNlPg%2B14QXpE6znG9080ei7NqIoAbbUWzCx1uNUN9seaIIO0OdCTFlpz9LR5wLUvaOfR2UWu6K1vFA9PJfqoI9u7AcBpZnk7XesHBX2NdQknpMTa3qymT7b1vUZq4agPhmXTmbttnPN%2B9czAB0VCTozidPbiZBQY%2BGhr8GhzcFADUbMMbbx0%3D212FD3x19z9sWBHDJACbC00B75E
+
+
+
+https://127.0.0.1:10808/?code=
+CKERQFYYiSdr3I9XZF9kTvnXprtuT4emTRfp7n94AmH4bYGIU%2BrGtwdvUyG5A8yFTK%2FiW7XUJD7fw0NsbUrbcLWU0175%2Bdp%2BKejlF6P5i5RASoWZ%2BKVfJ0x7g2lEGmExou0BY6UdeD%2FiKTHCDWx2L8XjIer%2FlfqowVdEXr5ZZh38pFL0JygPGszk3al9mDDZsxRApCjLN6n0a6WQlts2ptoWgxa%2FADURW4vagT9NseqlTRV4cPoLIjVvHE0modJGzowm8bgjqC%2FVlggPJvht6CCAfJEnyCVvswDVVlj2rsvwnBQM8bcHaZWwnbRFQ%2FJxLd0kQ88blYPJWt5zx1rXmDe0hgNsHlsijNHhfSMPVWfpnE43c9zljM1YERNKLhxHw9%2F8zsFH6sY3zfJD8t%2F%2BNh8xpQE8gGKORlnJXaNJurf%2F8uMoGVUEaJVKjEU100MQuG4LYrgoVi%2FJHHvlBNA3r6m4seQ9GABIAMLuCxk0XPnNaxCvUefYYBcW%2BZEIQVQeKwXtUvAfmacrsYG8TSFWtjZ3nBbHfY7Tl%2FFI5lNJEdmfQi4c7%2BQLAMiw0IfK50zxyao9M5BcEIsoK%2F100w98fTs5KoOpZJyckVWpPSghdim2YsGTIT5tgWAVLfF1zPLXIKcrYEtbHR5LPnLpKoll6c1B3C8fg9m6SFRlQElmDZvGYhOaPk3z4c874erwKb%2Fos4zb3V9zpPzwcqgCSFiUvRHvAcFj2%2BsnACoubnn7C3tietqot5m1OfSzpit7lSPnfEIXUXDkE8YrgS6%2BdCQK5U7Xka7DEvJyJ8nOpN6oHFfvQYe7QZP2tE4CJbyNqSdJMvM9mCVJaHeBNOtciEN0kKEXciiRDzdnghbfJGemrFxHtlVJ91%2B0ychoFUPdlL6drvn27SuxAyE%3D212FD3x19z9sWBHDJACbC00B75E
