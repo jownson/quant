@@ -15,7 +15,4 @@ pro = ts.pro_api('c3e325e4b592c23ccda5c725041659db55e87111f245eac3bb7b9dc2')
 ts.get_hist_data(stock_num)
 
 
-dfs3NNy17Yb9Adu9xfCC
-
-
 print(ts)
