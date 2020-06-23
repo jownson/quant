@@ -31,6 +31,7 @@ def handle_data(context, data):
            short_mavg=short_mavg,
            long_mavg=long_mavg)
 
-# set QUANDL_API_KEY=dfs3NNy17Yb9Adu9xfCC zipline ingest -b quandl
-# zipline run -f dual_moving_average.py --start 2014-1-1 --end 2018-1-1 -o dma.pickle
+# set QUANDL_API_KEY=dfs3NNy17Yb9Adu9xfCC
+# zipline ingest -b quandl
+# zipline run -f dual_moving_average.py --start 2014-1-4 --end 2015-6-4 -o dma.pickle
 # zipline run -f ../../zipline/examples/buyapple.py --start 2016-1-1 --end 2018-1-1 -o buyapple_out.pickle
